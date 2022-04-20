@@ -13,7 +13,7 @@ modules: [
 			updateInterval: 1000*60*15,
 			calendars : [
 			{
-				url: "webcal://p115-caldav.icloud.com/published/2/MTk1NDIyNDY1MTk1NDIyNCDN7fRloCZ0ouBhfcFTB7gxfH2g8Zzc61Qoue5OxvjQSwTCQrjLmA2Rl2vjInvfs4a5dHKPiuNU1IuAgl4n8qI",
+				url: "MyFamilyCalendarURL",
 			},
 			{
 				url: "https://www.google.com/calendar/ical/en.usa%23holiday@group.v.calendar.google.com/public/basic.ics",
