@@ -15,6 +15,7 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
     -Note: the config.js file isnt complete, just the module section. There will be other code in your default config file that must also remain.
     
 I also set a schedule for turning the output to the monitor on and off through crontab. Edit crontab by typing 'crontab -e' into the terminal
+
 0 22 * * * vcgencmd display_power 0  (Turns output off and monitor goes into sleep mode)
 0 6 * * *  vcgencmd display_power 1  (Turns monitor back on)
     
