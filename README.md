@@ -1,6 +1,8 @@
 # DCWMMsetup
 My custom set up for my magic mirror dashboard wall calendar
 
+![29FF0B60-9DDB-4495-9144-485B64C2ED63](https://user-images.githubusercontent.com/104077563/166502205-46e67ab6-69eb-4f78-abab-e0d337fb4b9f.JPG)
+
 Many asked for a step by step guide for how I created my set-up. So here it is. I did use a fair number of other tutorials, so I will not repeat thier work and will link to thier steps when needed. I will make it as beginner friendly as possible.
 
 1) Install PiOS or other full GUI OS on your raspberry pi.
