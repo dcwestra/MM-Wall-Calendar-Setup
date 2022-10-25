@@ -9,9 +9,13 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
   - the initial set-up process for DietPi will run you through CLI menus that will give you the option to install different GUIs depending on your need. I chose the lightest weight options.
 2) If using a Pi Zero 2 W, ssh in for install steps and overclock using dietpi-config > performance options > overclocking > high
   - Overclocking helps ensure the MagicMirror install and subsequent reboots doesn't overwhlem and freeze the Pi Zero 2. 
-3) Install manually with magicmirror.builders or this automated script: bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
+3) Install manually with magicmirror.builders or this automated script:
+            
+       bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 4) Follow this guide to finish installing Magic Mirror - https://www.magicmirrorcentral.com/complete-raspberry-pi-magic-mirror-tutorial/
-5) navigate to the modules folder: cd ~/MagicMirror/modules
+5) navigate to the modules folder: 
+
+       cd ~/MagicMirror/modules
 6) Install MMM-CalendarExt2 using their install guide: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 7) Install MMM-MicrosoftToDo using thier install guide: https://github.com/thobach/MMM-MicrosoftToDo
     -Note: follow the install guide carefully. Its a lot of work, but it does work. When it says to name the app, just call it Magic Mirror.
@@ -20,11 +24,10 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
     
 I also set a schedule for turning the output to the monitor on and off through crontab. Edit crontab by typing 'crontab -e' into the terminal
 
-0 22 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --off  (Turns the monitor off)
+    0 22 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --off  (Turns the monitor off)
+    0 6 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --auto  (Turns the monitor on)
 
-0 6 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --auto  (Turns the monitor on)
-
-    Note: If testing the display on and off in SSH, after 'export DISPLAY=:0.0' you will need to run 'xhost +' to allow the other commands to work. Because we are running the commands locally through crontab 'xhost +' is not needed.
+Note: If testing the display on and off in SSH, after 'export DISPLAY=:0.0' you will need to run 'xhost +' to allow the other commands to work. Because we are running the commands locally through crontab 'xhost +' is not needed.
     
 Let me know if you have any questions and I will elaborate.
 
