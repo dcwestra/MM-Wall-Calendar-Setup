@@ -25,6 +25,7 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
 I also set a schedule for turning the output to the monitor on and off through crontab.
 
     crontab -e
+Then add this at the bottom:
 
     0 22 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --off  (Turns the monitor off)
     0 6 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --auto  (Turns the monitor on)
