@@ -39,32 +39,36 @@ modules: [
 		},
 	},
 	{
-		module: "weather",
-		position: "top_right",
-		config: {
-			weatherProvider: "openweathermap",
-			type: "current",
-			showHumidity: true,
-			location: "Walker, US",
-			locationID: "5013924", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-			apiKey: "Replace with your own free api from openweathermap.org"
-		}
-	},
-	{
-		module: "weather",
-		position: "top_right",
-		header: "Weather Forecast",
-		config: {
-			weatherProvider: "openweathermap",
-            type: "forecast",
-            colored: false,
-            fade: false,
-            ignoreToday: true,
-            location: "Walker, US",
-            locationID: "5013924", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-            apiKey: "replace with your own free api from openweathermap.org"
-            }
-    },
+                module: "weather",
+                position: "top_right",
+                header: "Current Weather for",
+                config: {
+                        weatherProvider: "weathergov",
+                        showHumidity: true,
+                        apiBase: 'https://api.weather.gov/points/',
+                        weatherEndpoint: '/forecast/hourly',
+                        lat: 43.00770000000006,
+                        lon: -85.77765999999997,
+                }
+        },
+        {
+                module: "weather",
+                position: "top_right",
+                header: "Weather Forecast for",
+                config: {
+                        weatherProvider: "weathergov",
+                        colored: false,
+                        fade: false,
+                        ignoreToday: true,
+ 			location: "Walker, MI",
+                        apiBase: 'https://api.weather.gov/points/',
+                        weatherEndpoint: '/forecast',
+                        lat: 43.00770000000006,
+                        lon: -85.77765999999997,
+                        maxNumberOfDays: 5,
+                        type: "daily",
+                }
+        },
     {
         module: "newsfeed",
         position: "bottom_bar",
