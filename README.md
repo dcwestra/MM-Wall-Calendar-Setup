@@ -22,7 +22,9 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
 8) Copy in the code you want from my config.js and custom.css files.
     -Note: the config.js file isnt complete, just the module section. There will be other code in your default config file that must also remain.
     
-I also set a schedule for turning the output to the monitor on and off through crontab. Edit crontab by typing 'crontab -e' into the terminal
+I also set a schedule for turning the output to the monitor on and off through crontab.
+
+    crontab -e
 
     0 22 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --off  (Turns the monitor off)
     0 6 * * * export DISPLAY=:0.0 && xrandr --output HDMI-1 --auto  (Turns the monitor on)
