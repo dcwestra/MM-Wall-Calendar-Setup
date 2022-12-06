@@ -1,7 +1,7 @@
 ﻿/*For fullscreen background image. Place image in /css folder. Replace image title in the quotes with your image name. */
 .region.fullscreen.below {
 	background-image: url("wallpaper1.jpg");
-	backgroun-size: cover; /*cover = resize to fill screen, contain = resize to show whole image, auto = original size. Needed if background image isnt same resolution as display*/
+	background-size: cover; /*cover = resize to fill screen, contain = resize to show whole image, auto = original size. Needed if background image isnt same resolution as display*/
 }
 
 /*sets a static region width and keeps set margins, otherwise it will be adaptable.*/
