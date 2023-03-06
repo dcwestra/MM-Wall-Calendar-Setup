@@ -13,6 +13,7 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
             
        bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 4) Follow this guide to finish installing Magic Mirror - https://www.magicmirrorcentral.com/complete-raspberry-pi-magic-mirror-tutorial/
+  - dont add the auto-start mm.sh file in this tutorial if you use the automated install script as that script now has the auto-start mm.sh included. 
 5) navigate to the modules folder: 
 
        cd ~/MagicMirror/modules
