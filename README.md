@@ -57,6 +57,13 @@ cd MMM-MicrosoftToDo && npm install
   - custom.css needs to go into ~/MagicMirror/css
     - browse the code and make any changes you would like. Most of the code should hace comments on how to customize.
     - This is also the folder your wallpaper can be saved in and pull from.
+
+
+8) You are now ready to start MagicMirror with this command:
+
+```bash
+cd ~/MagicMirror && pm2 start MagicMirror
+```
     
 8) I also set a schedule for turning the output to the monitor on and off through crontab. This way the monitor automatically turns off when I am sleeping.
 
