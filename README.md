@@ -37,7 +37,6 @@ cd ~/MagicMirror/modules
 5) Install MMM-CalendarExt2. Check out thier page for configurations: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 
 ```bash
-cd ~/MagicMirror/modules
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 cd MMM-CalendarExt2
 npm install
