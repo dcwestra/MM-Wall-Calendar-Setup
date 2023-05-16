@@ -7,6 +7,7 @@ Many asked for a step by step guide for how I created my set-up. So here it is. 
 
 ### 1) Install full GUI OS on your raspberry pi. I personally recommend DietPi because its light weight and has great CLI menus to set everything up.
   - DietPi starts headless but the initial set-up process for DietPi will run you through CLI menus that will give you the option to install different GUIs depending on your need. I chose the lightest weight option, which is LXDE.
+
 ### 2) If using a Pi Zero 2 W, ssh in for install steps and overclock using 
 
 ```bash
@@ -43,7 +44,8 @@ npm install
 ```
 
 ### 6) Install MMM-MicrosoftToDo using their install guide: https://github.com/thobach/MMM-MicrosoftToDo
-    -DO THIS FIRST: follow the install guide carefully. There is a lot of prep work, but it does work. When it says to name the app, just call it Magic Mirror.
+
+DO THIS FIRST: follow the install guide carefully. There is a lot of prep work, but it does work. When it says to name the app, just call it Magic Mirror.
     
 ```bash
 cd ~/MagicMirror/modules
@@ -52,9 +54,10 @@ cd MMM-MicrosoftToDo && npm install
 ```
 
 ### 7) Replace the config.js file and custom.css file
-  - config.js needs to go into ~MagicMirror/config
+
+config.js needs to go into ~MagicMirror/config
     - besure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
-  - custom.css needs to go into ~/MagicMirror/css
+custom.css needs to go into ~/MagicMirror/css
     - browse the code and make any changes you would like. Most of the code should hace comments on how to customize.
     - This is also the folder your wallpaper can be saved in and pull from.
 
