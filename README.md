@@ -51,7 +51,12 @@ git clone https://github.com/thobach/MMM-MicrosoftToDo.git
 cd MMM-MicrosoftToDo && npm install
 ```
 
-7) Copy in the code you want from my config.js and custom.css files.
+7) Replace the config.js file and custom.css file
+  - config.js needs to go into ~MagicMirror/config
+    - besure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
+  - custom.css needs to go into ~/MagicMirror/css
+    - browse the code and make any changes you would like. Most of the code should hace comments on how to customize.
+    - This is also the folder your wallpaper can be saved in and pull from.
     
 8) I also set a schedule for turning the output to the monitor on and off through crontab. This way the monitor automatically turns off when I am sleeping.
 
