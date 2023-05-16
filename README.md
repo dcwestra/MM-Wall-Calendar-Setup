@@ -77,7 +77,7 @@ export DISPLAY=:0.0 xhost + && xrandr --output HDMI-1 --auto
 
 9) Added optimization for running minimally, you will need to edit and update the mm.sh file:
 
-copied from sdetweil (seriously, trust this guy).
+  - copied from sdetweil (seriously, trust this guy).
 
 Especially low powered devices like the Pi Zero W might struggle running MagicMirror with the Chromium browser. A simpler browser like Midori might be a good alternative in this case. To switch to using the Midori browser change the `MagicMirror/installers/mm.sh` file to include the `external_browser` variable like:
 
