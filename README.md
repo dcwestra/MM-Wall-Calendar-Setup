@@ -21,7 +21,7 @@ Then navigate the menu to performance options > overclocking > high
 3) Install manually with this automated script:
             
 ```bash
-curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh
+bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/fixuppm2.sh)"
 ```
 
   - some tutorials have you add in an script for auto-start. Current versions of this script from sdetweil include that start up, so its not needed.
