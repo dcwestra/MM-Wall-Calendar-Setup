@@ -5,9 +5,9 @@ My custom set up for my magic mirror dashboard wall calendar on Pi Zero 2W
 
 Many asked for a step by step guide for how I created my set-up. So here it is. I did use a fair number of other tutorials, so I will not repeat their work and will link to their steps when needed. I will make it as beginner friendly as possible.
 
-1) Install full GUI OS on your raspberry pi. I personally recommend DietPi because its light weight and has great CLI menus to set everything up.
+### 1) Install full GUI OS on your raspberry pi. I personally recommend DietPi because its light weight and has great CLI menus to set everything up.
   - DietPi starts headless but the initial set-up process for DietPi will run you through CLI menus that will give you the option to install different GUIs depending on your need. I chose the lightest weight option, which is LXDE.
-2) If using a Pi Zero 2 W, ssh in for install steps and overclock using 
+### 2) If using a Pi Zero 2 W, ssh in for install steps and overclock using 
 
 ```bash
 sudo dietpi-config
@@ -18,7 +18,7 @@ Then navigate the menu to performance options > overclocking > high
   - Overclocking helps ensure the MagicMirror install and subsequent reboots doesn't overwhelm and freeze the Pi Zero 2. Once installed, you can bring the overclocking back down.
   - The CPU on both the Pi Zero and Zero2 are powerful enough to run the software. The issue is the ammount of ram. It fills too quickly and memory swap is used. Overclocking helps it complete this process faster, preventing freezing and hang ups.
 
-3) Install manually with this automated script:
+### 3) Install manually with this automated script:
             
 ```bash
 bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/fixuppm2.sh)"
@@ -28,13 +28,13 @@ bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scrip
   - I know running pre configured scripts is sus, but this guy does a lot of development and support for MagicMirror, so he is credible and trustworthy.
 
 
-4) navigate to the modules folder: 
+### 4) navigate to the modules folder: 
 
 ```bash
 cd ~/MagicMirror/modules
 ```
 
-5) Install MMM-CalendarExt2. Check out thier page for configurations: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
+### 5) Install MMM-CalendarExt2. Check out thier page for configurations: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 
 ```bash
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
@@ -42,7 +42,7 @@ cd MMM-CalendarExt2
 npm install
 ```
 
-6) Install MMM-MicrosoftToDo using their install guide: https://github.com/thobach/MMM-MicrosoftToDo
+### 6) Install MMM-MicrosoftToDo using their install guide: https://github.com/thobach/MMM-MicrosoftToDo
     -DO THIS FIRST: follow the install guide carefully. There is a lot of prep work, but it does work. When it says to name the app, just call it Magic Mirror.
     
 ```bash
@@ -51,7 +51,7 @@ git clone https://github.com/thobach/MMM-MicrosoftToDo.git
 cd MMM-MicrosoftToDo && npm install
 ```
 
-7) Replace the config.js file and custom.css file
+### 7) Replace the config.js file and custom.css file
   - config.js needs to go into ~MagicMirror/config
     - besure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
   - custom.css needs to go into ~/MagicMirror/css
@@ -59,13 +59,13 @@ cd MMM-MicrosoftToDo && npm install
     - This is also the folder your wallpaper can be saved in and pull from.
 
 
-8) You are now ready to start MagicMirror with this command:
+### 8) You are now ready to start MagicMirror with this command:
 
 ```bash
 cd ~/MagicMirror && pm2 start MagicMirror
 ```
     
-8) I also set a schedule for turning the output to the monitor on and off through crontab. This way the monitor automatically turns off when I am sleeping.
+### 9) I also set a schedule for turning the output to the monitor on and off through crontab. This way the monitor automatically turns off when I am sleeping.
 
 ```bash
 crontab -e
@@ -87,7 +87,7 @@ export DISPLAY=:0.0 xhost + && xrandr --output HDMI-1 --auto
 
   - Because we are running the commands locally through crontab 'xhost +' is not needed.
 
-9) Added optimization for running minimally, you will need to edit and update the mm.sh file:
+### 10) Added optimization for running minimally, you will need to edit and update the mm.sh file:
 
   - copied from sdetweil (seriously, trust this guy).
 
