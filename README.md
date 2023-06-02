@@ -5,8 +5,10 @@ My custom set up for my magic mirror dashboard wall calendar on Pi Zero 2W
 
 Many asked for a step by step guide for how I created my set-up. So here it is. I did use a fair number of other tutorials, so I will not repeat their work and will link to their steps when needed. I will make it as beginner friendly as possible.
 
-### 1) Install full GUI OS on your raspberry pi. I personally recommend DietPi because its light weight and has great CLI menus to set everything up.
+### 1) Install full GUI OS on your raspberry pi. 
+  - I personally recommend DietPi because its light weight and has great CLI menus to set everything up.
   - DietPi starts headless but the initial set-up process for DietPi will run you through CLI menus that will give you the option to install different GUIs depending on your need. I chose the lightest weight option, which is LXDE.
+  - If not using a Pi Zero or Zero 2, skip to step 3.
 
 ### 2) If using a Pi Zero 2 W, ssh in for install steps and overclock using 
 
@@ -35,7 +37,9 @@ bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scri
 cd ~/MagicMirror/modules
 ```
 
-### 5) Install MMM-CalendarExt2. Check out thier page for configurations: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
+### 5) Install MMM-CalendarExt2. 
+
+  - Check out thier page for configurations: https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 
 ```bash
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
@@ -43,7 +47,9 @@ cd MMM-CalendarExt2
 npm install
 ```
 
-### 6) Install MMM-MicrosoftToDo using their install guide: https://github.com/thobach/MMM-MicrosoftToDo
+### 6) Install MMM-MicrosoftToDo 
+
+  - Use their install guide: https://github.com/thobach/MMM-MicrosoftToDo
 
 DO THIS FIRST: follow the install guide carefully. There is a lot of prep work, but it does work. When it says to name the app, just call it Magic Mirror.
     
@@ -56,11 +62,21 @@ cd MMM-MicrosoftToDo && npm install
 ### 7) Replace the config.js file and custom.css file
 
 - config.js needs to go into ~MagicMirror/config
-    - besure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
+    - be sure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
 - custom.css needs to go into ~/MagicMirror/css
     - browse the code and make any changes you would like. Most of the code should hace comments on how to customize.
     - This is also the folder your wallpaper can be saved in and pull from.
 
+- The easiest way to get wall paper is with the wget command. Dont forget to update the url below to the wallpaper image you want.
+
+```bash
+~/MagicMirror/css
+wget WALLPAPER.URL
+```
+
+- as an added hint/bonus, you can use your own pictures by uploading them to a cloud service like google drive, dropbox, etc and then downloading them
+  - google drive wget downloads need a little prep work. follow this guide: https://chemicloud.com/blog/download-google-drive-files-using-wget/
+  - dropbox is more straight forward as the sharling link is a direct file link, just place the link after wget.
 
 ### 8) You are now ready to start MagicMirror with this command:
 
