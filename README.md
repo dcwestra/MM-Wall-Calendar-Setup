@@ -1,4 +1,4 @@
-# DCWMMsetup
+# Wall Calendar Configuration for MagicMirror
 My custom set up for my magic mirror dashboard wall calendar on Pi Zero 2W
 
 ![29FF0B60-9DDB-4495-9144-485B64C2ED63](https://user-images.githubusercontent.com/104077563/166502205-46e67ab6-69eb-4f78-abab-e0d337fb4b9f.JPG)
