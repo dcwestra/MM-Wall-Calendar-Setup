@@ -85,9 +85,9 @@ modules: [
                         weatherProvider: "weathergov",
                         showHumidity: true,
                         apiBase: 'https://api.weather.gov/points/',
-                        weatherEndpoint: '/forecast/hourly',
-                        lat: 43.00770000000006,
-                        lon: -85.77765999999997,
+                        type: "current",
+                        lat: 43.0077,
+                        lon: -85.7777,
                 }
         },
         {
@@ -101,11 +101,9 @@ modules: [
                         ignoreToday: true,
  			location: "Walker, MI",
                         apiBase: 'https://api.weather.gov/points/',
-                        weatherEndpoint: '/forecast',
-                        lat: 43.00770000000006,
-                        lon: -85.77765999999997,
-                        maxNumberOfDays: 5,
-                        type: "daily",
+                        lat: 43.0077,
+                        lon: -85.7777,
+                        type: "forecast",
                 }
         },
     {
