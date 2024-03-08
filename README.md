@@ -64,7 +64,7 @@ cd MMM-MicrosoftToDo && npm install
 - config.js needs to go into ~MagicMirror/config
     - be sure to replace and update certain module settings like your calendar URLS, weather location, newfeeds, and the microsoft to do configurations
 - custom.css needs to go into ~/MagicMirror/css
-    - browse the code and make any changes you would like. Most of the code should hace comments on how to customize.
+    - browse the code and make any changes you would like. Most of the code should have comments on how to customize.
     - This is also the folder your wallpaper can be saved in and pull from.
 
 - The easiest way to get wall paper is with the wget command. Dont forget to update the url below to the wallpaper image you want.
