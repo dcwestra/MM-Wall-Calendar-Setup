@@ -64,7 +64,7 @@ modules: [
 				mode: "month",
 				maxItems: 1000,
 				hideOverflow: false,
-				slotMaxHeight: 100px,
+				slotMaxHeight: 100px, //100px works great for months that show 5 weeks on the screen - use 90px when a month flows over into a 6th week
 				monthFormat: "MMMM YYYY",
 				timeFormat: "h:mm A",
 				position: "top_left",
