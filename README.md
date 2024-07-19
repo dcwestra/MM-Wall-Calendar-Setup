@@ -70,7 +70,7 @@ cd MMM-MicrosoftToDo && npm install
 - The easiest way to get wall paper is with the wget command. Dont forget to update the url below to the wallpaper image you want.
 
 ```bash
-~/MagicMirror/css
+cd ~/MagicMirror/css
 wget WALLPAPER.URL
 ```
 
