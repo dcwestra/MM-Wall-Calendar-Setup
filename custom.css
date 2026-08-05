@@ -1,67 +1,65 @@
 ﻿/*For fullscreen background image. Place image in /css folder. Replace image title in the quotes with your image name. */
 .region.fullscreen.below {
-	background-image: url("wallpaper1.jpg");
-	background-size: cover; /*cover = resize to fill screen, contain = resize to show whole image, auto = original size. Needed if background image isnt same resolution as display*/
+    background-image: url("wallpaper.jpg");
+    background-size: cover; /*cover = resize to fill screen, contain = resize to show whole image, auto = original size. Needed if background image isnt same resolution as display*/
 }
 
 /*sets a static region width and keeps set margins, otherwise it will be adaptable.*/
 /*Previously, long item names on the to do list would expand and overlap with the calendar.*/
 .region.top.right {
-    width: 300px;
+width: 300px;
 }
 
 /*customizes module width from standard region width*/
 /* example: MMM-CalendarExt2 is in location top_left. The css blow extends it to almost the full width of the screen, leaving room for modules in top_right*/
 .MMM-CalendarExt2 {
-    width: 1475px;
+width: 1475px;
 }
 
 /*Changes size, color and alignment of month title*/
-.MMM-CalendarExt2 .monthViewTitle {
-    font-weight: bold;
-	font-size: calc(var(--font-size) * 3);
-	color: #606060;
-	text-align: left;
+.clock-grid .digital .date {
+    font-size: calc(var(--font-size) * 2);
+    color: #606060;
+    text-align: left;
 }
 
 /*gets rid of calendar slot box gradient*/
 .MMM-CalendarExt2  .slot > .slotContent {
-    position: relative;
-	width: 100%;
-	background-image: none;
+position: relative;
+    width: 100%;
+    background-image: none;
 }
 
 /*makes slot header box have rounded corners & adds border*/
 .MMM-CalendarExt2 .slot .slotHeader {
-    background-color: rgb(64 64 64 / 80%);
-	border-radius: 10px;
-	border: 2px solid #F5F5F5;
-	height: calc(var(--font-size) + 6px);
-	padding: 6px 6px 0;
-	font-weight: bold;
+background-color: rgb(64 64 64 / 80%);
+    border-radius: 10px;
+    border: 2px solid #F5F5F5;
+    height: calc(var(--font-size) + 6px);
+    padding: 6px 6px 0;
+    font-weight: bold;
 }
 
 /*changes color of today slot header*/
 .MMM-CalendarExt2 .today .slotHeader {
-    /* today slot */
-	background-color: #66CC99;
-	border-radius: 10px;
-	border: 2px solid #69C;
-	color: #000;
+/* today slot */
+    background-color: #66CC99;
+    border-radius: 10px;
+    border: 2px solid #69C;
+    color: #000;
 }
 
 /*changes newsfeed title color (default modules use the main MM css so that terminology must be used to override, .bright for article title .dimmed for feed title)*/
 .newsfeed .dimmed {
-    color: #202020;
+color: #202020;
 }
 
-/*Align Microsoft To Do list lext to the left*/
-.MMM-MicrosoftToDo .module-content {
-	text-align: left;
-	color: #FFFFFF;
-}
-
-/*Align module header to the left: change module name to fit your module*/
-.MMM-MicrosoftToDo .module-header {
-        text-align: left;
+.newsfeed .newsfeed-title {
+  color: #F5F5F5;
+  text-shadow:
+    -1px -1px 0 rgba(0,0,0,0.9),
+     1px -1px 0 rgba(0,0,0,0.9),
+    -1px  1px 0 rgba(0,0,0,0.9),
+     1px  1px 0 rgba(0,0,0,0.9),
+     0   3px 6px rgba(0,0,0,0.95);
 }
